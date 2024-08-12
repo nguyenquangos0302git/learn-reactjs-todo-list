@@ -1,34 +1,54 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import {
+  Button,
+  Input,
+  Table,
+  TableBody,
+  TableHeader,
+  Typography,
+} from './components';
+import { Header } from './components/REMOVE_HERE_AFTER_DONE/Header';
+import { TodoItems } from './components/REMOVE_HERE_AFTER_DONE/TodoItems';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
+    <section
+      className='w-100 py-5 px-4'
+      style={{ backgroundColor: '#eee', borderRadius: '.5rem .5rem 0 0' }}
+    >
+      <div className='row d-flex justify-content-center py-5'>
+        <div className='col col-lg-9 col-xl-9'>
+          <div className='card rounded-3'>
+            <div className='card-body p-4'>
+              <h4 className='text-center my-3 pb-3'>To Do App</h4>
+              {/* <Header />
+              <Form />
+              <TodoItems /> */}
+              <Button>Hello World</Button>
+              <Typography>Hello World</Typography>
+              <Input placeholder='Hello World' />
+              <Table align='middle' className='mb-0 bg-white'>
+                <TableHeader>
+                  <tr>
+                    <th scope='col'>#</th>
+                    <th scope='col'>First</th>
+                    <th scope='col'>Last</th>
+                    <th scope='col'>Handle</th>
+                  </tr>
+                </TableHeader>
+                <TableBody>
+                  <tr>
+                    <th scope='row'>1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Todo List</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </section>
   );
 }
 
